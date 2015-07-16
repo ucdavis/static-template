@@ -8,6 +8,20 @@ header {
 	.header-content {
 		@include inner-content;
 	}
+	.site-brand {
+		display:inline-block;
+		width:33%;
+	}
+	.site-nav {
+		display:inline-block;
+		width:33%;
+	}
+	.site-search {
+		display:inline-block;
+		width:23%;
+		float:right;
+		background-color:green;
+	}
 }
 .main {
 	.main-content {
