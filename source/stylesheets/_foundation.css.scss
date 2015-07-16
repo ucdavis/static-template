@@ -1,0 +1,16 @@
+header {
+	border-top:20px solid darken($primary-color,5);
+	background-color:$primary-color;
+	padding:1% 0% .5% 0%;
+	.header-content {
+		@include inner-content;
+	}
+}
+footer {
+	.footer-content {
+		@include inner-content;
+		.columns {
+			background-color:green;
+		}
+	}
+}
