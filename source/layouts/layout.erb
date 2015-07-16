@@ -10,7 +10,7 @@
     <title><%= current_page.data.title || "The Middleman" %></title>
 
     <%= stylesheet_link_tag "skeleton", "bootstrap.min", "base" %>
-    <%= javascript_include_tag  "all", "bootstrap.min" %>
+    <%= javascript_include_tag  "all" %>
   
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="/images/favicon.ico">
@@ -18,17 +18,11 @@
   </head>
    <body class="<%= page_classes %>">
         <%= partial "header" %>
-        <%= partial "fullnav" %>
         <%= yield %>
         <%= partial "footer" %>
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script type="text/javascript">
-          $('#menu2').slicknav({
-            label: '',
-            duration: 1000,
-            easingOpen: "easeOutBounce", //available with jQuery UI
-            prependTo:'#demo2'
-          });
-        </script>
+
+    <script>
+      var menu = new cbpTooltipMenu( document.getElementById( 'cbp-tm-menu' ) );
+    </script>
    </body>
 </html>
